@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="weight.css " rel="stylesheet " />
+</head>
+
+<body>
+    <header>
+        Weight Tracker
+    </header>
+    <div class="container ">
+        <div>
+            <span>Date</span>
+            <input type="date" id="start" value="  /  /    " min="01/01/2019" max="21/12/2022">
+        </div>
+        <div>
+            <span>Weight</span>
+            <input id="weight" type="number" placeholder="kg" />
+        </div>
+        <div>
+            <button type="button" class="shadow" id="add" onclick="add()">Add</button>
+        </div>
+    </div>
+    <div class="history">
+        <span>History</span>
+        <table class="history-cell">
+            <tr>
+                <td>kg</td>
+                <td>day</td>
+            </tr>
+            <tr>
+                <td>kg</td>
+                <td>day</td>
+            </tr>
+            <tr>
+                <td>kg</td>
+                <td>day</td>
+            </tr>
+            <tr>
+                <td>kg</td>
+                <td>day</td>
+            </tr>
+            <tr>
+                <td>kg</td>
+                <td>day</td>
+            </tr>
+            <tr>
+                <td>kg</td>
+                <td>day</td>
+            </tr>
+            <tr>
+                <td>kg</td>
+                <td>day</td>
+            </tr>
+            <tr>
+                <td>kg</td>
+                <td>day</td>
+            </tr>
+            <tr>
+                <td>kg</td>
+                <td>day</td>
+            </tr>
+            <tr>
+                <td>kg</td>
+                <td>day</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <span>Statistics</span>
+        <div>
+            <button type="button" class="shadow" id="week" onclick="week()">Week</button>
+            <button type="button" class="shadow" id="month" onclick="month()">Month</button>
+            <button type="button" class="shadow" id="year" onclick="year()">Year</button>
+            <button type="button" class="shadow" id="lifetime" onclick="lifetime()">Lifetime</button>
+        </div>
+    </div>
+    <script src="weight.js ">
+    </script>
+</body>
+
+</html>
