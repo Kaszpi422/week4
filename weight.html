@@ -2,73 +2,32 @@
 <html>
 
 <head>
+    <title>weight_tracker</title>
     <link href="weight.css " rel="stylesheet " />
 </head>
 
-<body>
-    <header>
+<body onload="validDate()">
+    <header class="text">
         Weight Tracker
     </header>
     <div class="container ">
-        <div>
-            <span>Date</span>
-            <input type="date" id="start" value="  /  /    " min="01/01/2019" max="21/12/2022">
-        </div>
-        <div>
-            <span>Weight</span>
-            <input id="weight" type="number" placeholder="kg" />
-        </div>
-        <div>
-            <button type="button" class="shadow" id="add" onclick="add()">Add</button>
-        </div>
+        <section class="input">
+            <div>Date</div>
+            <div><input type="date" name="date" id="date" class="form-control input-sm " required /></div>
+        </section>
+        <section class="input">
+            <div>Weight</div>
+            <div><input id="weight" type="number" maxlength="3" placeholder="kg" /></div>
+        </section>
+        <button type="button" id="add" class="shadow" onclick="add()">Add</button>
     </div>
-    <div class="history">
-        <span>History</span>
-        <table class="history-cell">
-            <tr>
-                <td>kg</td>
-                <td>day</td>
-            </tr>
-            <tr>
-                <td>kg</td>
-                <td>day</td>
-            </tr>
-            <tr>
-                <td>kg</td>
-                <td>day</td>
-            </tr>
-            <tr>
-                <td>kg</td>
-                <td>day</td>
-            </tr>
-            <tr>
-                <td>kg</td>
-                <td>day</td>
-            </tr>
-            <tr>
-                <td>kg</td>
-                <td>day</td>
-            </tr>
-            <tr>
-                <td>kg</td>
-                <td>day</td>
-            </tr>
-            <tr>
-                <td>kg</td>
-                <td>day</td>
-            </tr>
-            <tr>
-                <td>kg</td>
-                <td>day</td>
-            </tr>
-            <tr>
-                <td>kg</td>
-                <td>day</td>
-            </tr>
+    <div>
+        <span class="word">History</span>
+        <table id="display" class="history-cell">
         </table>
     </div>
     <div>
-        <span>Statistics</span>
+        <span class="word">Statistics</span>
         <div>
             <button type="button" class="shadow" id="week" onclick="week()">Week</button>
             <button type="button" class="shadow" id="month" onclick="month()">Month</button>
@@ -76,6 +35,20 @@
             <button type="button" class="shadow" id="lifetime" onclick="lifetime()">Lifetime</button>
         </div>
     </div>
+    <div class="box">
+        <section>
+            <span class="current"></span>
+            <div>Current weight</div>
+        </section>
+        <section>
+            <span class="start_period"></span>
+            <div>Weight at the start of the period</div>
+        </section>
+    </div>
+    <section class="box2">
+        <span class="progress"></span>
+        <div>Progress</div>
+    </section>
     <script src="weight.js ">
     </script>
 </body>
